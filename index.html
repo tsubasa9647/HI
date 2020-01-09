@@ -7,35 +7,54 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-  <h1>Anime.jsのサンプル</h1>
-  <div class="css-prop-demo">
-  <div class="el"></div>
+  <div id="pagebody">
+    <h1>Anime.jsのサンプル</h1>
+    <!-- メインメニュー -->
+	  <ul id="menu">
+    <div class="css-prop-demo">
+    <div class="el"></div>
+    </div>
+    <br>
+    <div class="add">
+      <marquee behavior="alternate" loop="-1">
+      <a href="https://px.a8.net/svt/ejp?a8mat=3B5061+EO3ICY+1WP2+60H7L" rel="nofollow">
+      <img border="0" width="125" height="125" alt="" src="https://www22.a8.net/svt/bgt?aid=200107801887&wid=001&eno=01&mid=s00000008903001010000&mc=1"></a>
+      <img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=3B5061+EO3ICY+1WP2+60H7L" alt="">
+      </marquee>
+    </div>
+    </ul>>
+
+    <!-- コンテンツ（中央と右の2カラム） -->
+  	<div id="content">
+  		<!-- ニュース（中央カラム） -->
+  		<div id="news">
+  			<h2>ニュース</h2>
+  			<h3>Ad</h3>
+  			<p>
+  			adadddd
+  		</div>
+  		<!-- ピックアップ（右カラム） -->
+  		<div id="pickup">
+  			<a href="https://px.a8.net/svt/ejp?a8mat=3B5061+EMB7JM+0K+11KG9T" rel="nofollow">
+                  <img border="0" width="160" height="600" alt="" src="https://www28.a8.net/svt/bgt?aid=200107801884&wid=001&eno=01&mid=s00000000002006310000&mc=1"></a>
+                  <img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=3B5061+EMB7JM+0K+11KG9T" alt="">
+  		</div>
+    </div>
+    
+    <script src="calc.js"></script>
+    <script src="path/anime.min.js"></script>
+    <script type="text/javascript"> 
+   anime({
+      targets: '.css-prop-demo .el',
+      translateX: 250,
+      backgroundColor: '#fff',
+      borderRadius: ['0%', '50%'],
+      autoplay: true,
+      loop: true,
+      direction: 'alternate',
+      easing: 'easeInOutQuad'
+    });
+    </script>
   </div>
-  <br>
-  <div class="add">
-    <marquee behavior="alternate" loop="-1">
-    <a href="https://px.a8.net/svt/ejp?a8mat=3B5061+EO3ICY+1WP2+60H7L" rel="nofollow">
-    <img border="0" width="125" height="125" alt="" src="https://www22.a8.net/svt/bgt?aid=200107801887&wid=001&eno=01&mid=s00000008903001010000&mc=1"></a>
-    <img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=3B5061+EO3ICY+1WP2+60H7L" alt="">
-    </marquee>
-  </div>
-  
-  <script src="calc.js"></script>
-  <script src="path/anime.min.js"></script>
-  <script type="text/javascript">
-
-  anime({
-    targets: '.css-prop-demo .el',
-    translateX: 250,
-    backgroundColor: '#fff',
-    borderRadius: ['0%', '50%'],
-    autoplay: true,
-    loop: true,
-    direction: 'alternate',
-    easing: 'easeInOutQuad'
-  });
-
-  </script>
-
   </body>
 </html>

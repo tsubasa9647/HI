@@ -61,13 +61,18 @@
 	<div id="content">
 		<!-- ニュース（中央カラム） -->
 		<div id="news">
-			<h2>ニュース</h2>
-			<h3>かえるさんのサイトがオープン！！</h3>
-			<p>
-			けろけろ、けろけろ、けろけーろ。（中略）・・と、それはもう大変な喜びようだとか。
-			</p>
-			<p><img src="images/ss01.gif" alt="かえるサイトの画面" width="200" height="155" /></p>
-			<hr />
+			<div class="css-prop-demo">
+				<div class="el"></div>
+			</div>
+			<br>
+			<div class="add">
+				<marquee behavior="alternate" loop="-1">
+					<a href="https://px.a8.net/svt/ejp?a8mat=3B5061+EO3ICY+1WP2+60H7L" rel="nofollow">
+					<img border="0" width="125" height="125" alt=""
+						src="https://www22.a8.net/svt/bgt?aid=200107801887&wid=001&eno=01&mid=s00000008903001010000&mc=1"></a>
+					<img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=3B5061+EO3ICY+1WP2+60H7L" alt="">
+				</marquee>
+			</div>
 		</div>
 		<!-- ピックアップ（右カラム） -->
 		<div id="pickup">
@@ -81,5 +86,19 @@
 	<div id="footer"><address>Copyright (c) HTMQ All Rights Reserved.</address></div>
 
 </div>
+<script src="calc.js"></script>
+    <script src="path/anime.min.js"></script>
+    <script type="text/javascript"> 
+   anime({
+      targets: '.css-prop-demo .el',
+      translateX: 250,
+      backgroundColor: '#fff',
+      borderRadius: ['0%', '50%'],
+      autoplay: true,
+      loop: true,
+      direction: 'alternate',
+      easing: 'easeInOutQuad'
+    });
+    </script>
 </body>
 </html>
