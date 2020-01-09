@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+<link rel="stylesheet" type="text/css" href="sample.css" />
+<title>CSS learning</title>
+</head>
+<body>
+<script src="/path/anime.min.js"></script>
+<div id="pagebody">
+
+	<!-- ヘッダ -->
+	<div id="header"><h1><a href="index.html">CSS learning</a></h1></div>
+	
+	<!-- メインメニュー -->
+	<ul id="menu">
+		<li id="menu01"><a href="xxx.html">Home</a></li>
+		<li id="menu02"><a href="xxx.html">Overview</a></li>
+		<li id="menu03"><a href="xxx.html">Property</a></li>
+		<li id="menu04"><a href="xxx.html">Tips</a></li>
+		<li id="menu05"><a href="xxx.html">Contact</a></li>
+	</ul>
+
+	<!-- サブメニュー（左カラム） -->
+	<div id="submenu">
+        <script type="text/javascript">
+            var timeline = anime.timeline({
+                direction: 'alternate',
+                loop    :true,
+                delay:1000
+            });
+
+            timeline
+            .add({
+                targets: '#elem',
+                translateX: 250
+             })
+            .add({
+                targets: '#elem2',
+                translateX: 250,
+                offset:'-=600'
+            })
+            .add({
+                targets: '#elem3',
+                translateX: 250,
+                offset:'-=800'
+             });
+        </script>
+        <div class="wrapper">
+            <div class="square" id="elem"></div>
+            <br>
+            <div class="square" id="elem2"></div>
+            <br>
+            <div class="square" id="elem3"></div>
+        </div>
+	</div>
+
+	<!-- コンテンツ（中央と右の2カラム） -->
+	<div id="content">
+		<!-- ニュース（中央カラム） -->
+		<div id="news">
+			<h2>ニュース</h2>
+			<h3>かえるさんのサイトがオープン！！</h3>
+			<p>
+			けろけろ、けろけろ、けろけーろ。（中略）・・と、それはもう大変な喜びようだとか。
+			</p>
+			<p><img src="images/ss01.gif" alt="かえるサイトの画面" width="200" height="155" /></p>
+			<hr />
+		</div>
+		<!-- ピックアップ（右カラム） -->
+		<div id="pickup">
+			<a href="https://px.a8.net/svt/ejp?a8mat=3B5061+EMB7JM+0K+11KG9T" rel="nofollow">
+                <img border="0" width="160" height="600" alt="" src="https://www28.a8.net/svt/bgt?aid=200107801884&wid=001&eno=01&mid=s00000000002006310000&mc=1"></a>
+                <img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=3B5061+EMB7JM+0K+11KG9T" alt="">
+		</div>
+	</div>
+
+	<!-- フッタ -->
+	<div id="footer"><address>Copyright (c) HTMQ All Rights Reserved.</address></div>
+
+</div>
+</body>
+</html>

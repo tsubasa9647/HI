@@ -1,21 +1,41 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <title>InterstitialAdSamplesJS</title>
-    <link href="lib/winjs-4.0.1/css/ui-light.css" rel="stylesheet" />
-    <script src="lib/winjs-4.0.1/js/base.js"></script>
-    <script src="lib/winjs-4.0.1/js/ui.js"></script>
-    <link href="css/default.css" rel="stylesheet" />
-    <!-- JavaScript files containing code for this example -->
-    <script src="js/main.js"></script>
-    <script src="js/script.js"></script>
-    <!-- Required reference for InterstitialAd -->
-    <script src="//Microsoft.Advertising.JavaScript/ad.js"></script>
-</head>
-<body class="win-type-body">
-    <button id="requestAdButton" onclick="requestAdButtonClick" class="win-button">Request ad</button>
-    <button id="showAdButton" onclick="showAdButtonClick" class="win-button">Show ad</button>
-    <div id="description" style="height:100%; overflow:auto"></div>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1.0″>
+    <title>anime.jsサンプル</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+  <h1>Anime.jsのサンプル</h1>
+  <div class="css-prop-demo">
+  <div class="el"></div>
+  </div>
+  <br>
+  <div class="add">
+    <marquee behavior="alternate" loop="-1">
+    <a href="https://px.a8.net/svt/ejp?a8mat=3B5061+EO3ICY+1WP2+60H7L" rel="nofollow">
+    <img border="0" width="125" height="125" alt="" src="https://www22.a8.net/svt/bgt?aid=200107801887&wid=001&eno=01&mid=s00000008903001010000&mc=1"></a>
+    <img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=3B5061+EO3ICY+1WP2+60H7L" alt="">
+    </marquee>
+  </div>
+  
+  <script src="calc.js"></script>
+  <script src="path/anime.min.js"></script>
+  <script type="text/javascript">
+
+  anime({
+    targets: '.css-prop-demo .el',
+    translateX: 250,
+    backgroundColor: '#fff',
+    borderRadius: ['0%', '50%'],
+    autoplay: true,
+    loop: true,
+    direction: 'alternate',
+    easing: 'easeInOutQuad'
+  });
+
+  </script>
+
+  </body>
 </html>

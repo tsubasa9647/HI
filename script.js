@@ -106,4 +106,14 @@
         restart();
     };
 
+    var elem = document.getElementById('elem');
+    elem.addEventListener('click',function(){
+    anime({
+        targets: elem,
+        translateX: 250,
+        backgroundColor:"#000",
+        borderRadius:"50px"
+    })              
+})
+
 })();
