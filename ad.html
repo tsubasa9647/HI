@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>一定時間で変わる広告/JavaScript-JQuery/It's a long way to the top.</title>
+<script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+$(function(){
+
+	var INTERVAL = 5000;
+	
+	setInterval(function(){
+	
+		for( $i=1; $i<4; $i++ ){
+		
+			if( $i == 3 ){
+			
+				$j = 1;
+			
+			}
+			else{
+			
+				$j = $i + 1;
+			
+			}
+			
+			if( $( "#cm" + $i ).css( "display" ) != "none" ){
+			
+				$( "#cm" +$i )	.animate(
+									{ width:		"-=300px" },
+									{ complete:	function(){
+										$( "#cm" + $i ).hide(); }}
+									);
+				
+				$( "#cm" +$j )	.css( "left",	"300px")
+								.css( "width",	"0px")
+								.show()
+								.animate({ width: "+=300px", left: "-=300px" }, "slow" );
+				
+				break;
+			
+			}
+		
+		}
+	
+	},INTERVAL);
+
+});
+//-->
+</script>
+</head>
+
+<body>
+
+<div style="margin:30px 0px 30px 0px;padding:30px 0px 90px 0px;">
+<div id="cm1" style="display:block;border:1px solid #cccccc;padding:5px 10px 5px 10px;position:absolute;overflow:hidden;white-space:nowrap;width:300px;left:0px;">
+    <div class="add">
+        <a href="https://px.a8.net/svt/ejp?a8mat=3B5061+EO3ICY+1WP2+60H7L" rel="nofollow">
+        <img border="0" width="125" height="125" alt="" src="https://www22.a8.net/svt/bgt?aid=200107801887&wid=001&eno=01&mid=s00000008903001010000&mc=1"></a>
+        <img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=3B5061+EO3ICY+1WP2+60H7L" alt="">
+    </div>
+</div>
+
+
+<div id="cm2" style="display:none;border:1px solid #cc0000;padding:5px 10px 5px 10px;position:absolute;overflow:hidden;white-space:nowrap;">
+    <div class="add">
+        <a href="https://rpx.a8.net/svt/ejp?a8mat=3B5061+EMWN5E+2HOM+64Z8X&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2F0ea62065.34400275.0ea62066.204f04c0%2Fa20010736779_3B5061_EMWN5E_2HOM_64Z8X%3Fpc%3Dhttp%253A%252F%252Fwww.rakuten.co.jp%252F%26m%3Dhttp%253A%252F%252Fm.rakuten.co.jp%252F" rel="nofollow">
+            <img src="http://hbb.afl.rakuten.co.jp/hsb/0ec09ba2.ae233841.0eb4bbaa.95151395/" border="0"></a>
+            <img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=3B5061+EMWN5E+2HOM+64Z8X" alt="">
+    </div>
+</div>
+
+
+<div id="cm3" style="display:none;border:1px solid #0000cc;padding:5px 10px 5px 10px;position:absolute;overflow:hidden;white-space:nowrap;">
+    <div class="add">
+        <a href="https://px.a8.net/svt/ejp?a8mat=3B5061+EO3ICY+1WP2+60H7L" rel="nofollow">
+        <img border="0" width="125" height="125" alt="" src="https://www22.a8.net/svt/bgt?aid=200107801887&wid=001&eno=01&mid=s00000008903001010000&mc=1"></a>
+        <img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=3B5061+EO3ICY+1WP2+60H7L" alt="">
+    </div>
+</div>
+
+</body>
+</html>
