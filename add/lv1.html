@@ -13,6 +13,7 @@
     <script src="js/modaal.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/default.css" />
     <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link rel="stylesheet" href="css/sns.css" />
     <style>
         html,
         body,
@@ -38,6 +39,57 @@ and is wrapped around the whole page content, except for the footer in this exam
             <h1><b>TRIP of ITALY</b></h1>
             <p>
                 <span class="w3-opacity">November 15-21, 2019</span>
+                <div class="sns-share">
+                    <ul class="sns-area">
+                        <li>
+                            <a class="sns-facebook sns-link"
+                                href="https://www.facebook.com/sharer/sharer.php?u={URLEncodedPermalink}"
+                                onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;"
+                                target="_blank">
+                                <i class="fab fa-facebook-f"></i><span class="facebook-count share-text"><i
+                                        class="fa fa-spinner fa-spin"></i></span></a>
+                        </li>
+                        <li>
+                            <a class="sns-twitter sns-link"
+                                href="http://twitter.com/intent/tweet?text={Title} {URLEncodedPermalink}"
+                                target="_blank">
+                                <i class="fab fa-twitter" aria-hidden="true"></i><span
+                                    class="sns-txt">Twitter</span></a>
+                        </li>
+                        <li>
+                            <a class="sns-line sns-link"
+                                href="https://social-plugins.line.me/lineit/share?url={URLEncodedPermalink}"
+                                target="_blank">
+                                <i class="fab fa-line"></i><span class="sns-txt">LINE</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <!--jQueryを使用-->
+                <script src="https://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
+                <!--シェア数の取得-->
+                <script>
+                    //Facebookのシェア数を取得
+                    function getFacebookCount(url, selector) {
+                        $.ajax({
+                            url: 'https://graph.facebook.com/',
+                            dataType: 'jsonp',
+                            data: {
+                                id: url
+                            }
+                        }).done(function (res) {
+                            if (res.share && res.share.share_count) {
+                                $(selector).text(res.share.share_count);
+                            } else {
+                                $(selector).text(0);
+                            }
+                        }).fail(function () {
+                            $(selector).text('0');
+                        });
+                    }
+                    $(function () {
+                        getFacebookCount('{Permalink}', '.facebook-count');
+                    });
+                </script>
             </p>
         </div>
 
@@ -52,8 +104,9 @@ and is wrapped around the whole page content, except for the footer in this exam
                         <p>
                             <h2 class="article_tit_01">はじめに</h2>
 
-                            男3人で6泊7日のイタリア旅行に行ってきました。歴史的な建造物、情景、食べ物そしてかかった
-                            金額等まとめていこうと思うので参考になると思います。
+                            <p>男3人で6泊7日のイタリア旅行に行ってきました。歴史的な建造物、情景、食べ物そしてかかった
+                                金額等まとめていこうと思うので参考になると思います。
+                                国土全体に見どころが点在し、日本からも多くの観光客が訪れる国、イタリア。歴史や芸術、ファッションやグルメなど、旅を楽しめる要素に溢れています。</p>
 
                             <h2 class="article_tit_01" id="かかった費用">かかった費用</h2>
                             <aside class="g-sticky" id="g-sticky">
@@ -82,7 +135,7 @@ and is wrapped around the whole page content, except for the footer in this exam
                                     });
                                 });
                             </script>
-                            <h3 class="article_tit_01">ツアー代金の相場（イタリアに一週間滞在した場合）</h3>
+                            <h3>ツアー代金の相場（イタリアに一週間滞在した場合）</h3>
 
                             <p>個人手配に自信がなければ、航空券とホテルがセットになったパッケージツアーを選ぶと安心です。内容によっては、航空券とホテルを別々に手配するよりもお得になることも。パッケージツアーでイタリアを1週間旅行した場合、大人1名あたりのツアー代金の相場を調べてみました。
                             </p>
@@ -92,13 +145,115 @@ and is wrapped around the whole page content, except for the footer in this exam
 
                             <p>添乗員同行のパッケージツアーなら、慣れない土地での言葉の心配がなく、出発から帰国まで安心してサポートを頼むことができます。入場料が必要な観光スポットの料金も含まれ、添乗員や現地ガイドの案内でスムーズに観光できるのも高ポイント。その分フリープランに比べて費用は高くなるものの、200,000円台～で手配できます。お得な値段で売り出されることもあるので、「LINEトラベルjp」をこまめにチェックしておきましょう。
                             </p>
-                            <div class="paragraph_link" style="text-align: center;"><span class="article_body_cv"><a
-                                        class="article_body_cv_link article_body_cv_link--blue"
+                            <div style="text-align: center;">
+                                <span class="article_body_cv"><a class="article_body_cv_link article_body_cv_link--blue"
                                         href="https://www.travel.co.jp/src/it/02EUROPE/03IT/157/167/"
                                         onclick="ga('send','event', 'paragraph_pr_link', 'linkgid195', 'howto212_p2-1_【イタリア7日間】価格をチェック');">【イタリア7日間】価格をチェック
                                         &raquo</a></span>
                             </div>
+                            <h3>実際にかかった費用</h3>
+
+
                             <h2 class="article_tit_01" id="持ち物リスト">持ち物リスト</h2>
+                            <p>基本的には海外旅行も国内旅行も旅行という点では同じですが、海外旅行・イタリア旅行ならではの必需品もあるので、旅行が決まったら早めに準備しておくと安心です。</p>
+                            <h3>必需品・要検討の持ち物</h3>
+                            <p>先ずは必要なパスポートやビザの必要有無をチェックしましょう。 パックツアーか個人手配かによっても必要な印刷物などが変わってきます。
+                                日本とはコンセント・プラグの形状が異なるイタリアでは、変換プラグも必要です。</p>
+                            <ul class="titlelist">
+                                <li><span class="mm_must">必須</span>パスポート</a></li>
+                                <li><span class="mm_must">必須</span>ビザ（査証）※渡航目的による</li>
+                                <li><span class="mm_must">必須</span>航空券のeチケット控え</li>
+                                <li><span class="mm_must">必須</span>最終旅程表・クーポン類 ※パックツアー</li>
+                                <li><span class="mm_must">必須</span>現地通貨の現金</li>
+                                <li><span class="mm_must">必須</span>クレジットカード</a></li>
+                            </ul>
+                            <ul class="titlelist">
+                                <li><span class="mm_consider">検討</span>パスポートのコピー</li>
+                                <li><span class="mm_consider">検討</span>証明写真 ※パスポートと同じ写真の予備</li>
+                                <li><span class="mm_consider">検討</span>海外旅行保険保険証</li>
+                                <li><span class="mm_consider">検討</span>国際免許証 ※レンタカー運転の場合</li>
+                                <li><span class="mm_need">必要</span>コンセント用変換プラグ（Cタイプ）</li>
+                            </ul>
+                            <h3>衣類・機内便利グッズ・洗面用品・コスメ</h3>
+                            <p>イタリア滞在中に現地で買おうとすると意外に面倒なのが、洗面用品やコスメなど。 いつも使っている商品を持っていくか、小さめの容器に詰め替えると便利です。</p>
+                            <ul class="titlelist">
+                                <li><span class="mm_clothes">衣類</span>服</li>
+                                <li><span class="mm_clothes">衣類</span>下着</li>
+                                <li><span class="mm_clothes">衣類</span>靴下</li>
+                                <li><span class="mm_clothes">衣類</span>靴</li>
+                                <li><span class="mm_clothes">衣類</span>ビーチサンダル</li>
+                                <li><span class="mm_clothes">衣類</span>折りたたみ傘・レインウェア</li>
+                                <li><span class="mm_clothes">衣類</span>パジャマ・ナイトウェア</li>
+                                <li><span class="mm_clothes">衣類</span>スリッパ</li>
+                                <li><span class="mm_clothes">衣類</span>水着 ※行き先によっておすすめ</li>
+                                <li><span class="mm_clothes">衣類</span>衣類圧縮袋</li>
+                                <li><span class="mm_flight">機内</span>アイマスク</li>
+                                <li><span class="mm_flight">機内</span>ネックピロー</li>
+                                <li><span class="mm_flight">機内</span>耳栓・ノイズキャンセリングイヤホン</li>
+                                <li><span class="mm_cosme">洗面</span>常備薬</li>
+                                <li><span class="mm_cosme">洗面</span>メガネ・コンタクトレンズ・保存液</li>
+                                <li><span class="mm_cosme">洗面</span>目薬</li>
+                                <li><span class="mm_cosme">洗面</span>歯ブラシ・歯磨き粉</li>
+                                <li><span class="mm_cosme">洗面</span>石鹸・ボディソープ</li>
+                                <li><span class="mm_cosme">洗面</span>シャンプー・トリートメント</li>
+                                <li><span class="mm_cosme">洗面</span>リップクリーム</li>
+                                <li><span class="mm_cosme">洗面</span>ヘアブラシ</li>
+                                <li><span class="mm_cosme">洗面</span>化粧品・メイク落とし</li>
+                                <li><span class="mm_cosme">洗面</span>生理用品</li>
+                                <li><span class="mm_cosme">洗面</span>海外対応ドライヤー</li>
+                                <li><span class="mm_cosme">洗面</span>旅行用の携帯ウォシュレット</li>
+                                <li><span class="mm_cosme">洗面</span>髭剃り・シェーブクリーム</li>
+                            </ul>
+                            <h3>日用品・観光</h3>
+                            <p>日本国内の旅行でも持っていくような日用品はもちろん旅行でも役立ちます。
+                                スマートフォンを頻繁に使う予定ならモバイルWi-Fiをレンタルしていきましょう。
+                                僕は今回の旅行で海外Wi-Fiルータではなく海外通信用SIMカードを選択しました。
+                                モバイルルータの充電も気にしになくてよいし比較的イタリアでは石造りの建物の中以外であればつながります</p>
+                            <ul class="titlelist">
+                                <li><span class="mm_cosme">日用</span>ボールペン・メモ帳　※搭乗手続きのために機内で持っていたほうが良いです。</li>
+                                <li><span class="mm_cosme">日用</span>ポケットティッシュ</li>
+                                <li><span class="mm_cosme">日用</span>ウェットティッシュ</li>
+                                <li><span class="mm_cosme">日用</span>マスク ※乾燥する機内でも役立ちます</li>
+                                <li><span class="mm_cosme">日用</span>ホッカイロ ※冬など寒い時期に</li>
+                                <li><span class="mm_sightseeing">観光</span>ガイドブック</a></li>
+                                <li><span class="mm_sightseeing">観光</span>スマートフォン・携帯電話・充電コード</li>
+                                <li><span class="mm_sightseeing">観光</span>海外Wi-Fiレンタル（モバイルルーター）</a></li>
+                                <li><span class="mm_sightseeing">観光</span>カメラ本体・予備バッテリー・充電機器</li>
+                                <li><span class="mm_sightseeing">観光</span>レンズ各種（一眼カメラの場合）</li>
+                                <li><span class="mm_sightseeing">観光</span>SDカードなどの記録メディア</li>
+                            </ul>
+                            <p>オススメのイタリア用プリペイドSIMカード<br>
+                                <strong>Wi-Ho!SIM（ワイホーSIM）</strong><br>
+                                <div class="itemPanel">
+                                    <div class="itemPanel__image">
+                                        <a href="https://www.amazon.co.jp/%E3%83%A8%E3%83%BC%E3%83%AD%E3%83%83%E3%83%91%E5%91%A8%E9%81%8A-Wi-Ho-SIM-%E3%83%87%E3%83%BC%E3%82%BF%E9%80%9A%E4%BF%A1%E5%B0%82%E7%94%A8-%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB/dp/B07M5JBYH6?SubscriptionId=AKIAIS7DY5TWMMKS6TIA&amp;tag=dokoiku04-22&amp;linkCode=xm2&amp;camp=2025&amp;creative=165953&amp;creativeASIN=B07M5JBYH6"
+                                            alt="ヨーロッパ周遊 Wi-Ho!SIM 4G LTE プリペイド SIM カード 30日間 5GB データ通信専用 日本語マニュアル 24Hサポート 3in1 SIM">
+                                            <img src="https://images-fe.ssl-images-amazon.com/images/I/518ibmsMMcL.jpg"
+                                                width="250px" />
+                                        </a>
+                                        <div class="m-t-10">
+                                            出典 : <a
+                                                href="https://www.amazon.co.jp/%E3%83%A8%E3%83%BC%E3%83%AD%E3%83%83%E3%83%91%E5%91%A8%E9%81%8A-Wi-Ho-SIM-%E3%83%87%E3%83%BC%E3%82%BF%E9%80%9A%E4%BF%A1%E5%B0%82%E7%94%A8-%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB/dp/B07M5JBYH6?SubscriptionId=AKIAIS7DY5TWMMKS6TIA&amp;tag=dokoiku04-22&amp;linkCode=xm2&amp;camp=2025&amp;creative=165953&amp;creativeASIN=B07M5JBYH6">www.amazon.co.jp</a>
+                                        </div>
+                                    </div>
+                                    <div class="itemPanel__desc">
+                                        <div class="itemPanel__manufacturer"></div>
+                                        <div class="itemPanel__title">ヨーロッパ周遊 Wi-Ho!SIM 4G LTE プリペイド SIM カード 30日間 5GB
+                                            データ通信専用 日本語マニュアル 24Hサポート 3in1 SIM</div>
+                                        <div class='itemPanel__price'>3520円</div>
+                                        <ul class="itemPanel__button-list">
+                                            <li>
+                                                <a href="https://www.amazon.co.jp/%E3%83%A8%E3%83%BC%E3%83%AD%E3%83%83%E3%83%91%E5%91%A8%E9%81%8A-Wi-Ho-SIM-%E3%83%87%E3%83%BC%E3%82%BF%E9%80%9A%E4%BF%A1%E5%B0%82%E7%94%A8-%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB/dp/B07M5JBYH6?SubscriptionId=AKIAIS7DY5TWMMKS6TIA&amp;tag=dokoiku04-22&amp;linkCode=xm2&amp;camp=2025&amp;creative=165953&amp;creativeASIN=B07M5JBYH6"
+                                                    class="btn btn--theme btn--post-item" rel="nofollow">
+                                                    Amazonで詳細を見る
+                                                </a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                    <div class='itemPanel__comment'></div>
+                                </div>
+                            </p>
                             <h2 class="article_tit_01" id="ローマ編">ローマ編</h2>
                             <img src="img/italy/dome.jpg" style="width:100%" />
                             <img src="img/italy/mon.jpg" style="width:100%" />
@@ -116,6 +271,8 @@ and is wrapped around the whole page content, except for the footer in this exam
                             <img src="img/italy/food.jpg" style="width:100%" />
                             <img src="img/italy/food2.jpg" style="width:100%" />
                             <img src="img/italy/food3.jpg" style="width:100%" />
+                        </p>
+                        </p>
                         </p>
                         <div class="w3-row">
                             <div class="w3-col m8 s12"></div>
@@ -180,14 +337,11 @@ and is wrapped around the whole page content, except for the footer in this exam
                     <ul class="w3-ul w3-hoverable w3-white">
                         <ul class="table-of-contents">
                             <li><a href="#はじめに">はじめに</a></li>
-                            <li><a href="#かかった費用">かかった費用</a>
-                            </li>
-                            <li><a href="#ローマ編">ローマ編</a>
-                            </li>
-                            <li><a href="#フィレンツェ編">フィレンツェ編</a>
-                            </li>
-                            <li><a href="#サレント編">サレント編</a>
-                            </li>
+                            <li><a href="#かかった費用">かかった費用</a></li>
+                            <li><a href="#持ち物リスト">持ち物リスト</a></li>
+                            <li><a href="#ローマ編">ローマ編</a></li>
+                            <li><a href="#フィレンツェ編">フィレンツェ編</a></li>
+                            <li><a href="#サレント編">サレント編</a></li>
                         </ul>
                     </ul>
                 </div>
