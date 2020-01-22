@@ -2,14 +2,17 @@
 <html lang="ja">
 
 <head>
-    <title>W3.CSS</title>
+    <title>TsubasaBLOG</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="css/modaal.min.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
     <script src="js/modaal.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
     <style>
         html,
         body,
@@ -18,7 +21,7 @@
         h3,
         h4,
         h5 {
-            font-family: "Raleway", sans-serif;
+            font-family: 'Arial', 'Hiragino Kaku Gothic ProN';
         }
     </style>
 </head>
@@ -27,7 +30,7 @@
     <!-- w3-content defines a container for fixed size centered content, 
 and is wrapped around the whole page content, except for the footer in this example -->
     <div class="w3-display-container w3-animate-opacity">
-        <img src="img/IMG_5324.jpg" style="width:100%;min-height:350px;max-height:600px;" />
+        <img src="img/italy/IMG_5324.jpg" style="width:100%;min-height:350px;max-height:600px;" />
     </div>
     <div class="w3-content" style="max-width:1400px">
         <!-- Header -->
@@ -44,18 +47,75 @@ and is wrapped around the whole page content, except for the footer in this exam
             <div class="w3-col l8 s12">
                 <!-- Blog entry -->
                 <div class="w3-card-4 w3-margin w3-white">
-                    <div class="w3-container w3-padding-hor-8">
-                        <h3><b>TRIP of ITALY</b></h3>
-                        <h5>
-                            6 nights 7 days trip to Italy,
-                            <span class="w3-opacity">November 15-21, 2019</span>
-                        </h5>
-                    </div>
 
                     <div class="w3-container">
                         <p>
+                            <h2 class="article_tit_01">はじめに</h2>
+
                             男3人で6泊7日のイタリア旅行に行ってきました。歴史的な建造物、情景、食べ物そしてかかった
                             金額等まとめていこうと思うので参考になると思います。
+
+                            <h2 class="article_tit_01" id="かかった費用">かかった費用</h2>
+                            <aside class="g-sticky" id="g-sticky">
+                                <a class="g-sticky_bnr" href="https://www.travel.co.jp/point/line/"
+                                    onclick="ga('send','event','PB_line','click','g-sticky_guide_PC');"><img
+                                        class="g-sticky_bnr_img"
+                                        src="https://img3.guide.travel.co.jp/images/bnr/bnr_line_pb_620_180_02.png"
+                                        alt="LINEポイント還元中！旅行代10万円×還元率10％なら10,000ポイントもらえる！※一部サービス・取り扱い旅行会社のみ" width="310"
+                                        height="90"></a>
+                                <p class="g-sticky_more"><a class="g-sticky_more_link"
+                                        href="https://www.travel.co.jp/point/line/"
+                                        onclick="ga('send','event','PB_line','click','g-sticky_guide_PC');">詳しくはこちら</a>
+                                </p>
+                            </aside>
+                            <script type="text/javascript">
+                                $(function () {
+                                    /* webポイントバック常設バナー */
+                                    var $gSticky = $("#g-sticky");
+                                    var gStickySet = $.cookie("gStickyBnr");
+                                    if (gStickySet !== 'hidden') {
+                                        $gSticky.removeClass("is-hide");
+                                    }
+                                    $(".g-sticky_close").click(function () {
+                                        $gSticky.addClass("is-hide");
+                                        $.cookie('gStickyBnr', "hidden", { path: "/", expires: 1 });
+                                    });
+                                });
+                            </script>
+                            <h3 class="article_tit_01">ツアー代金の相場（イタリアに一週間滞在した場合）</h3>
+
+                            <p>個人手配に自信がなければ、航空券とホテルがセットになったパッケージツアーを選ぶと安心です。内容によっては、航空券とホテルを別々に手配するよりもお得になることも。パッケージツアーでイタリアを1週間旅行した場合、大人1名あたりのツアー代金の相場を調べてみました。
+                            </p>
+
+                            <p>航空券とホテルのみのフリープランなら、時期やプラン内容にもよるものの、最安で100,000円台～で手配することができます。高いランクのホテルに泊まるプランを選んだり、直行便を利用したりすると値段はさらにアップ。ひとつの都市だけでなく、大きな都市を複数めぐりたい場合はその分移動費が含まれ、高くなる傾向があります。また、ガイドや専用車付きの現地ツアーを含むプランだと、そのぶんガイド代や専用車台がプラスされます。
+                            </p>
+
+                            <p>添乗員同行のパッケージツアーなら、慣れない土地での言葉の心配がなく、出発から帰国まで安心してサポートを頼むことができます。入場料が必要な観光スポットの料金も含まれ、添乗員や現地ガイドの案内でスムーズに観光できるのも高ポイント。その分フリープランに比べて費用は高くなるものの、200,000円台～で手配できます。お得な値段で売り出されることもあるので、「LINEトラベルjp」をこまめにチェックしておきましょう。
+                            </p>
+                            <div class="paragraph_link" style="text-align: center;"><span class="article_body_cv"><a
+                                        class="article_body_cv_link article_body_cv_link--blue"
+                                        href="https://www.travel.co.jp/src/it/02EUROPE/03IT/157/167/"
+                                        onclick="ga('send','event', 'paragraph_pr_link', 'linkgid195', 'howto212_p2-1_【イタリア7日間】価格をチェック');">【イタリア7日間】価格をチェック
+                                        &raquo</a></span>
+                            </div>
+                            <h2 class="article_tit_01" id="持ち物リスト">持ち物リスト</h2>
+                            <h2 class="article_tit_01" id="ローマ編">ローマ編</h2>
+                            <img src="img/italy/dome.jpg" style="width:100%" />
+                            <img src="img/italy/mon.jpg" style="width:100%" />
+                            <img src="img/italy/santa.jpg" style="width:100%" />
+                            <img src="img/italy/kao.jpg" style="width:100%" />
+                            <img src="img/italy/spain.jpg" style="width:100%" />
+                            <h2 class="article_tit_01" id="フィレンツェ編">フィレンツェ編</h2>
+                            <img src="img/italy/rome-firen.PNG" style="width:100%" />
+                            <img src="img/italy/doomo.jpg" style="width:100%" />
+                            <h2 class="article_tit_01" id="サレント編">サレント編</h2>
+                            <img src="img/italy/rome-salent.PNG" style="width:100%" />
+                            <img src="img/italy/wine.jpg" style="width:100%" />
+                            <img src="img/italy/wine2.jpg" style="width:100%" />
+                            <h2 class="article_tit_01" id="食事編">食事編</h2>
+                            <img src="img/italy/food.jpg" style="width:100%" />
+                            <img src="img/italy/food2.jpg" style="width:100%" />
+                            <img src="img/italy/food3.jpg" style="width:100%" />
                         </p>
                         <div class="w3-row">
                             <div class="w3-col m8 s12"></div>
@@ -80,51 +140,32 @@ and is wrapped around the whole page content, except for the footer in this exam
                         <p>
                             <div class="cp_timeline03">
                                 <div class="timeline_group">
-                                    <span class="time_year">2018</span>
+                                    <span class="time_year">2019</span>
                                     <div class="timeline_item">
                                         <div class="time">
-                                            <span class="time_day">22</span>
-                                            <span class="time_month">Feb</span>
+                                            <span class="time_day">15</span>
+                                            <span class="time_month">Nov</span>
                                         </div>
                                         <div class="desc">
-                                            <p class="flag">タイトル</p>
-                                            内容
+                                            <p class="flag">Going</p>
+                                            福岡空港(FUK)発<br>
+                                            浦東空港着<br>
+                                            浦東空港発<br>
+                                            フィウミチーノ空港(FCO)着
                                         </div>
                                     </div>
+
                                     <div class="timeline_item">
                                         <div class="time">
-                                            <span class="time_day">10</span>
-                                            <span class="time_month">Sept</span>
+                                            <span class="time_day">23</span>
+                                            <span class="time_month">Nov</span>
                                         </div>
                                         <div class="desc">
-                                            <p class="flag">タイトル</p>
-                                            内容
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="timeline_group">
-                                    <span class="time_year">2017</span>
-                                    <div class="timeline_item">
-                                        <div class="time">
-                                            <span class="time_day">1</span>
-                                            <span class="time_month">Jul</span>
-                                        </div>
-                                        <div class="desc">
-                                            <p class="flag">タイトル</p>
-                                            内容
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="timeline_group">
-                                    <span class="time_year">2016</span>
-                                    <div class="timeline_item">
-                                        <div class="time">
-                                            <span class="time_day">14</span>
-                                            <span class="time_month">Aug</span>
-                                        </div>
-                                        <div class="desc">
-                                            <p class="flag">タイトル</p>
-                                            内容
+                                            <p class="flag">Return</p>
+                                            フィウミチーノ空港(FCO)発<br>
+                                            浦東空港着<br>
+                                            浦東空港発<br>
+                                            福岡空港(FUK)着
                                         </div>
                                     </div>
                                 </div>
@@ -137,11 +178,17 @@ and is wrapped around the whole page content, except for the footer in this exam
                         <h4>OUTLINE</h4>
                     </div>
                     <ul class="w3-ul w3-hoverable w3-white">
-                        <li class="w3-padding-hor-16">
-                            <img src="img/tubasa.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px" />
-                            <span class="w3-large">Lorem</span><br />
-                            <span>Sed mattis nunc</span>
-                        </li>
+                        <ul class="table-of-contents">
+                            <li><a href="#はじめに">はじめに</a></li>
+                            <li><a href="#かかった費用">かかった費用</a>
+                            </li>
+                            <li><a href="#ローマ編">ローマ編</a>
+                            </li>
+                            <li><a href="#フィレンツェ編">フィレンツェ編</a>
+                            </li>
+                            <li><a href="#サレント編">サレント編</a>
+                            </li>
+                        </ul>
                     </ul>
                 </div>
                 <hr />
@@ -177,18 +224,19 @@ and is wrapped around the whole page content, except for the footer in this exam
             <!-- END GRID -->
         </div>
         <br />
-
-        <!-- Footer -->
-        <footer class="w3-container w3-dark-grey w3-padding-hor-32 w3-margin-top">
-            <a class="w3-btn w3-padding-large w3-margin-bottom" href="index.html">Previous</a>
-            <button class="w3-btn w3-disabled w3-padding-large w3-margin-bottom">
-                Next &raquo;
-            </button>
-            <p>
-                Powered by
-                <a href="http://www.mklab" target="_blank">w3.css</a>
-            </p>
-        </footer>
+    </div>
+    <!-- Footer -->
+    <footer class="w3-container w3-dark-grey w3-padding-hor-32 w3-margin-top">
+        <a class="w3-btn w3-padding-large w3-margin-bottom" href="index.html">Previous</a>
+        <button class="w3-btn w3-disabled w3-padding-large w3-margin-bottom">
+            Next &raquo;
+        </button>
+        <p>
+            Powered by
+            <a href="http://www.mklab" target="_blank">mklab</a>
+        </p>
+    </footer>
+    <div id="page_top"><a href="#"></a></div>
 </body>
 
 </html>

@@ -2,15 +2,19 @@
 <html lang="ja">
 
 <head>
-    <title>W3.CSS</title>
+    <title>TsubasaBLOG</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
     <script src="js/main.js"></script>
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
     <script type="text/javascript" src="intense.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
     <style>
         html,
         body,
@@ -19,7 +23,7 @@
         h3,
         h4,
         h5 {
-            font-family: "Raleway", sans-serif;
+            font-family: 'Arial', 'Hiragino Kaku Gothic ProN';
         }
     </style>
 </head>
@@ -29,17 +33,10 @@
 and is wrapped around the whole page content, except for the footer in this example -->
     <div class="w3-display-container w3-animate-opacity">
         <div class="fullscreen-image">
-			<img src="img/1457857391838.jpg" style="width:100%;min-height:350px;max-height:600px;" />
-		</div>
+            <img src="img/newzealand/1457857391838.jpg" style="width:100%;min-height:350px;max-height:600px;" />
+        </div>
     </div>
-    <div class="container">
-        <div class="popup" id="js-popup">
-          <div class="popup-inner">
-            <div class="close-btn" id="js-close-btn"><i class="fas fa-times"></i></div>
-            <a href="#"><img src="img/tubasa.jpg" alt="ポップアップ画像"></a>
-          </div>
-          <div class="black-background" id="js-black-bg"></div>
-    </div>
+
     <div class="w3-content" style="max-width:1400px">
         <!-- Header -->
         <div class="w3-container w3-center w3-padding-hor-32">
@@ -55,34 +52,27 @@ and is wrapped around the whole page content, except for the footer in this exam
             <div class="w3-col l8 s12">
                 <!-- Blog entry -->
                 <div class="w3-card-4 w3-margin w3-white">
-                    <div class="w3-container w3-padding-hor-8">
-                        <h3><b>TRIP of NEW ZEALAND</b></h3>
-                        <h5>
-                            A month trip to New Zealand,
-                            <span class="w3-opacity">November 15-21, 2019</span>
-                        </h5>
-                    </div>
-
                     <div class="w3-container">
                         <p>
-                            一か月のニュージーランドへ語学留学に行ってきました。歴史的な建造物、情景、食べ物そしてかかった
-                            金額等まとめていこうと思うので参考になると思います。
+                            <h2><b>はじめに</b></h2>
+                            <hr>
+                            一週間ニュージーランドへ旅行へ行ってきました。<br>
+                            日本では見られないような歴史的な建造物、情景、食べ物そしてかかった
+                            費用等まとめていこうと思います。
 
-                            <div class="popup_wrap">
-                                <input id="trigger" type="checkbox">
-                                <div class="popup_overlay">
-                                    <label for="trigger" class="popup_trigger"></label>
-                                    <div class="popup_content">
-                                        <label for="trigger" class="close_btn">×</label>
-                                        <p>
-                                            <img src="img/tubasa.jpg"
-                                                style="width:100%;min-height:350px;max-height:600px;" />
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <label for="trigger" class="open_btn">クリックしてね</label>
+                            <h2><b>かかった費用</b></h2>
+                            <hr>
+                            <h2><b>クライストチャーチ</b></h2>
+                            <hr>
+                            <img src="img/newzealand/christ.jpg" style="width:100%" />
+                            <img src="img/newzealand/bridge.jpeg" style="width:100%" />
+                            <img src="img/newzealand/raguby.JPG" style="width:100%" />
+                            <h2><b>テカポ</b></h2>
+                            <hr>
+                            <img src="img/newzealand/mtcook.JPG" style="width:100%" />
+                            <img src="img/newzealand/mtcook2.JPG" style="width:100%" />
+                            <img src="img/newzealand/tekapo.JPG" style="width:100%" />
+                            <img src="img/newzealand/tekapo2.jpg" style="width:100%" />
                         </p>
                         <div class="w3-row">
                             <div class="w3-col m8 s12"></div>
@@ -105,14 +95,31 @@ and is wrapped around the whole page content, except for the footer in this exam
                     </div>
                     <div class="w3-container w3-white">
                         <p>
-                            <div class="timeline gray-blue">
-                                <!-- 主要素のコンテナ -->
-                                <div class="timeline-block">
-                                    <!-- タイムラインの一つのブロック -->
-                                    <div class="timeline-icon"></div> <!-- タイムライン上のアイコン -->
-                                    <div class="timeline-content">
-                                        <p> Any content </p> <!-- コンテンツ -->
-                                        <div class="timeline-date">Yesterday</div> <!-- 日付 -->
+                            <div class="cp_timeline03">
+                                <div class="timeline_group">
+                                    <span class="time_year">2019</span>
+                                    <div class="timeline_item">
+                                        <div class="time">
+                                            <span class="time_day">15</span>
+                                            <span class="time_month">Nov</span>
+                                        </div>
+                                        <div class="desc">
+                                            <p class="flag">Going</p>
+                                            福岡空港(FUK)発<br>
+                                            クライストチャーチ空港(CHC)着
+                                        </div>
+                                    </div>
+
+                                    <div class="timeline_item">
+                                        <div class="time">
+                                            <span class="time_day">23</span>
+                                            <span class="time_month">Nov</span>
+                                        </div>
+                                        <div class="desc">
+                                            <p class="flag">Return</p>
+                                            クライストチャーチ空港(CHC)発<br>
+                                            福岡空港(FUK)着
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -124,16 +131,19 @@ and is wrapped around the whole page content, except for the footer in this exam
                         <h4>OUTLINE</h4>
                     </div>
                     <ul class="w3-ul w3-hoverable w3-white">
-                        <li class="w3-padding-hor-16">
-                            <img src="img/tubasa.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px" />
-                            <span class="w3-large">Lorem</span><br />
-                            <span>Sed mattis nunc</span>
-                        </li>
+                        <ul class="table-of-contents">
+                            <li><a href="#CSSの貼り付け場所">はじめに</a></li>
+                            <li><a href="#動きをもたせた-2017年6月8日追加">かかった費用</a>
+                            </li>
+                            <li><a href="#シンプルに変える">クライストチャーチ</a>
+                            </li>
+                            <li><a href="#シンプルに変える2">テカポ</a>
+                            </li>
+                        </ul>
                     </ul>
                 </div>
                 <hr />
 
-                <!-- Labels / tags -->
                 <div class="w3-card-2 w3-margin">
                     <div class="w3-container w3-padding">
                         <h4>Tags</h4>
@@ -186,8 +196,8 @@ and is wrapped around the whole page content, except for the footer in this exam
             }
         </script>
         <script>
-            var elements = document.querySelectorAll( '.fullscreen-image' );
-            Intense( elements );
+            var elements = document.querySelectorAll('.fullscreen-image');
+            Intense(elements);
         </script>
 
         <!-- END w3-content -->
@@ -201,9 +211,10 @@ and is wrapped around the whole page content, except for the footer in this exam
         </button>
         <p>
             Powered by
-            <a href="http://www.mklab" target="_blank">w3.css</a>
+            <a href="http://www.mklab" target="_blank">mklab</a>
         </p>
     </footer>
+    <div id="page_top"><a href="#"></a></div>
 </body>
 
 </html>
