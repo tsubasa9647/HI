@@ -1211,7 +1211,7 @@ h3 {
   -webkit-box-sizing: border-box;
 }
 .g-sticky.is-hide {
-  bottom: -300px;
+  display: none;
 }
 .g-sticky_close:before {
   font-family: "Font Awesome 5 Free";

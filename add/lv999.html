@@ -126,8 +126,14 @@ and is wrapped around the whole page content, except for the footer in this exam
 
                             <script>
                                 $(function () { /* webポイントバック常設バナー */
+                                    /* webポイントバック常設バナー */
+                                    var $gSticky = $("#g-sticky");
                                     $(".g-sticky_close").click(function () {
-                                        $gSticky.addClass("is-hide");
+                                        $gSticky.css({
+                                            "position": "absolute",
+                                            "top": Math.floor(Math.random() * $("body").height()),
+                                            "left": Math.floor(Math.random() * $("body").width())
+                                        }).appendTo($gSticky)
                                     });
                                 });
 
