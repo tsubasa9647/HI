@@ -119,6 +119,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 
                             <h2 class="article_tit_01" id="かかった費用">かかった費用</h2>
                             <aside class="g-sticky" id="g-sticky">
+                                <button class="g-sticky_close" type="button">閉じる</button>
                                 <a class="g-sticky_bnr" href="https://www.travel.co.jp/point/line/"
                                     onclick="ga('send','event','PB_line','click','g-sticky_guide_PC');"><img
                                         class="g-sticky_bnr_img"
@@ -134,13 +135,8 @@ and is wrapped around the whole page content, except for the footer in this exam
                                 $(function () {
                                     /* webポイントバック常設バナー */
                                     var $gSticky = $("#g-sticky");
-                                    var gStickySet = $.cookie("gStickyBnr");
-                                    if (gStickySet !== 'hidden') {
-                                        $gSticky.removeClass("is-hide");
-                                    }
                                     $(".g-sticky_close").click(function () {
-                                        $gSticky.addClass("is-hide");
-                                        $.cookie('gStickyBnr', "hidden", { path: "/", expires: 1 });
+                                        $gSticky.hide();
                                     });
                                 });
                             </script>
@@ -370,7 +366,7 @@ and is wrapped around the whole page content, except for the footer in this exam
     <div class="w3-col l4 w3-hide-medium w3-hide-small">
 
         <!-- Posts -->
-        <div class="w3-card-2 w3-margin">
+        <div class="w3-card-2 w3-margin" >
             <div class="w3-container w3-margin">
                 <h4>SCHEDULE</h4>
             </div>
