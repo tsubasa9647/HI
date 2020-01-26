@@ -1,0 +1,20 @@
+﻿.u_adFloatingBox.is_slide {
+    visibility: visible;
+    animation-name: u_adFloatingBox_anime;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+    transform-origin: 0% 100%;
+}
+.u_adFloatingBox {
+    visibility: hidden;
+    width: 100%;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 7px 30px 0;
+    background: #333;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    z-index: 500;
+}
