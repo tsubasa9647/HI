@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <title>TsubasaBLOG</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/w3.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/sns.css" />
+    <link rel="stylesheet" href="css/font.css" />
+    <script data-ad-client="ca-pub-2688178828177415" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+<div class="w3-bar w3-black w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="#home" class="w3-bar-item w3-button">TsubasaBLOG</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+        <a href="#about" class="w3-bar-item w3-button">About</a>
+        <a href="#menu" class="w3-bar-item w3-button">Menu</a>
+        <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    </div>
+</div>
+<div class="w3-col l12 s12">
+    <header class="w3-container w3-content w3-wide" style="max-width:1400px;min-width:500px" id="home">
+        <img class="w3-image" src="img/italy/IMG_5324.jpg" alt="Italy" width="1600" height="800">
+    </header>
+</div>
+
+<body class="w3-light-grey">
+
+    <div class="w3-content" style="max-width:1400px">
+        <!-- Header -->
+        <div class="w3-container w3-center w3-padding-hor-32">
+            <h1><b>TRIP to ITALY</b></h1>
+            <p>
+                <span class="w3-opacity">November 15-21, 2019</span>
+                <div class="sns-share">
+                    <ul class="sns-area">
+                        <li>
+                            <a class="sns-facebook sns-link"
+                                href="https://www.facebook.com/sharer/sharer.php?u={URLEncodedPermalink}"
+                                onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;"
+                                target="_blank">
+                                <i class="fab fa-facebook-f"></i><span class="facebook-count share-text"><i
+                                        class="fa fa-spinner fa-spin"></i></span></a>
+                        </li>
+                        <li>
+                            <a class="sns-twitter sns-link"
+                                href="http://twitter.com/intent/tweet?text={Title} {URLEncodedPermalink}"
+                                target="_blank">
+                                <i class="fab fa-twitter" aria-hidden="true"></i><span
+                                    class="sns-txt">Twitter</span></a>
+                        </li>
+                        <li>
+                            <a class="sns-line sns-link"
+                                href="https://social-plugins.line.me/lineit/share?url={URLEncodedPermalink}"
+                                target="_blank">
+                                <i class="fab fa-line"></i><span class="sns-txt">LINE</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <!--シェア数の取得-->
+                <script>
+                    //Facebookのシェア数を取得
+                    function getFacebookCount(url, selector) {
+                        $.ajax({
+                            url: 'https://graph.facebook.com/',
+                            dataType: 'jsonp',
+                            data: {
+                                id: url
+                            }
+                        }).done(function (res) {
+                            if (res.share && res.share.share_count) {
+                                $(selector).text(res.share.share_count);
+                            } else {
+                                $(selector).text(0);
+                            }
+                        }).fail(function () {
+                            $(selector).text('0');
+                        });
+                    }
+                    $(function () {
+                        getFacebookCount('{Permalink}', '.facebook-count');
+                    });
+                </script>
+            </p>
+        </div>
+
+        <!-- Grid -->
+        <div class="w3-row">
+            <!-- Blog entries -->
+            <div class="w3-col l12 s12">
+                <!-- Blog entry -->
+                <div class="w3-card-1 w3-margin w3-white">
+                    <div class="w3-row">
+                        <div class="w3-twothird w3-container">
+                            <p>
+                                <h2 class="article_tit_01">はじめに</h2>
+
+                                <p>男3人で6泊7日のイタリア旅行に行ってきました。歴史的な建造物、情景、食べ物そしてかかった
+                                    金額等まとめていこうと思うので参考になると思います。
+                                    国土全体に見どころが点在し、日本からも多くの観光客が訪れる国、イタリア。歴史や芸術、ファッションやグルメなど、旅を楽しめる要素に溢れています。</p>
+                        </div>
+                        <div class="w3-third w3-container">
+                            <!-- Posts -->
+                            <div class="w3-card-2 w3-margin">
+                                <div class="w3-container w3-padding w3-center">
+                                    <h4>目次</h4>
+                                </div>
+                                <ul class="w3-ul w3-hoverable w3-white">
+                                    <ul class="table-of-contents">
+                                        <li><a href="#はじめに">はじめに</a></li>
+                                        <li><a href="#かかった費用">かかった費用</a></li>
+                                        <li><a href="#持ち物リスト">持ち物リスト</a></li>
+                                        <li><a href="#ローマ編">ローマ編</a></li>
+                                        <li><a href="#フィレンツェ編">フィレンツェ編</a></li>
+                                        <li><a href="#サレント編">サレント編</a></li>
+                                    </ul>
+                                </ul>
+                            </div>
+                            <hr />
+
+                            <!-- Labels / tags -->
+                            <div class="w3-card-2 w3-margin">
+                                <div class="w3-container w3-padding">
+                                    <h4>人気記事</h4>
+                                </div>
+                                <ul class="w3-ul w3-hoverable w3-white">
+                                    <li class="w3-padding-hor-16">
+                                        <a href="lv1.html">
+                                            <img src="img/italy/IMG_5324.jpg" alt="Image"
+                                                class="w3-left w3-margin-right" style="width:50px" />
+                                            <span class="w3-large">Tsubasa Imamrua</span><br />
+                                            <span>TRIP of ITALY</span>
+                                        </a>
+                                    </li>
+                                    <li class="w3-padding-hor-16">
+                                        <a href="lv999.html">
+                                            <img src="img/newzealand/1457857391838.jpg" alt="Image"
+                                                class="w3-left w3-margin-right" style="width:50px" />
+                                            <span class="w3-large">Tsubasa Imamura</span><br />
+                                            <span>TRIP of NEW ZEALAND</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+
+            <!-- END GRID -->
+        </div>
+        <br />
+    </div>
+    <!-- Footer -->
+    <footer class="w3-container w3-dark-grey w3-padding-hor-32 w3-margin-top">
+        <a class="w3-btn w3-padding-large w3-margin-bottom" href="index.html">Previous</a>
+        <button class="w3-btn w3-disabled w3-padding-large w3-margin-bottom">
+            Next &raquo;
+        </button>
+
+    </footer>
+    <div id="page_top"><a href="#"></a></div>
+</body>
+
+</html>
