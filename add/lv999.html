@@ -16,7 +16,17 @@
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/component.css" />
     <link rel="stylesheet" type="text/css" href="css/sns.css" />
-    <script data-ad-client="ca-pub-2688178828177415" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script data-ad-client="ca-pub-2688178828177415" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157728114-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-157728114-1');
+    </script>
     <style>
         html,
         body,
@@ -25,7 +35,7 @@
         h3,
         h4,
         h5 {
-            font-family:YuGothic, "游ゴシック体", "Yu Gothic", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+            font-family: YuGothic, "游ゴシック体", "Yu Gothic", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
         }
     </style>
 </head>
@@ -461,13 +471,13 @@ and is wrapped around the whole page content, except for the footer in this exam
         cursor: pointer;
     }
 </style>
-    <div class="popup is-show" id="js-popup">
-        <div class="popup-inner" id="popup-image">
-            <div class="close-btn" id="js-close-btn"><i class="fas fa-times"></i></div>
-            <a href="#"><img src="img/tubasaoriginal.jpg" alt="ポップアップ画像"></a>
-        </div>
-        <div class="black-background" id="js-black-bg"></div>
+<div class="popup is-show" id="js-popup">
+    <div class="popup-inner" id="popup-image">
+        <div class="close-btn" id="js-close-btn"><i class="fas fa-times"></i></div>
+        <a href="#"><img src="img/tubasaoriginal.jpg" alt="ポップアップ画像"></a>
     </div>
+    <div class="black-background" id="js-black-bg"></div>
+</div>
 <script>
     window.onload = function () {
 
