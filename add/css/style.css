@@ -430,3 +430,17 @@
   font-weight: bold;
   margin-bottom: 10px;
 }
+.footer-pagetop.is-visible {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+.footer-pagetop {
+  position: fixed;
+  bottom: 4%;
+  right: 3%;
+  z-index: 50;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  transition: .4s;
+  z-index: 200;
+}
